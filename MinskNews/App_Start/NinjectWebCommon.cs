@@ -12,6 +12,9 @@ namespace MinskNews.App_Start
     using Ninject.Web.Common;
     using Services;
     using System.Web.Mvc;
+    using MinskNews;
+    using Repositories;
+    using Models;
 
     public static class NinjectWebCommon 
     {
@@ -46,6 +49,7 @@ namespace MinskNews.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+                kernel.Bind<IRepository<News>>().To<NewsRepository>();
 
                 RegisterServices(kernel);
                 return kernel;
