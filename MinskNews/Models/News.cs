@@ -12,7 +12,7 @@ namespace MinskNews.Models
         [HiddenInput]
         public int Id { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(200)]
         [Display(Name = "Заголовок")]
         [Required(ErrorMessage = "Введите заголовок")]
         public string Title { get; set; }
@@ -32,7 +32,7 @@ namespace MinskNews.Models
         public string FullText { get; set; }
 
         [ScaffoldColumn(false)]
-        public byte[] Inage { get; set; }
+        public byte[] Image { get; set; }
 
         [ScaffoldColumn(false)]
         public string MineType { get; set; }
