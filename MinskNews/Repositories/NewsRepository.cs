@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace MinskNews.Repositories
@@ -17,6 +18,7 @@ namespace MinskNews.Repositories
         public void Create(News t)
         {
             context.News.Add(t);
+            context.SaveChanges();
         }
 
         public void Delete(int id)
@@ -48,6 +50,11 @@ namespace MinskNews.Repositories
         {
             context.Entry<News>(t).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
+        }
+
+        public Task<News> GetAsync(int id)
+        {
+            return context.News.FindAsync(id);
         }
 
     }

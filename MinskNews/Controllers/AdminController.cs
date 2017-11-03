@@ -32,38 +32,61 @@ namespace MinskNews.Controllers
         [HttpPost]
         public ActionResult Create(News news, HttpPostedFileBase imageUpload = null)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (imageUpload != null)
+                {
+                    var count = imageUpload.ContentLength;
+                    news.Image = new byte[count];
+                    imageUpload.InputStream.Read(news.Image, 0, (int)count);
+                    news.MineType = imageUpload.ContentType;
+                }
+                try
+                {
+                    _repoNews.Create(news);
+                    return RedirectToAction("Index");
+                }
+                catch 
+                {
+                    return View(news);
+                }
             }
-            catch
-            {
-                return View();
-            }
+            else
+                return View(news);
+            
         }
 
         // GET: Admin/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(_repoNews.Get(id));
         }
 
         // POST: Admin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(News news, HttpPostedFileBase imageUpload = null)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (imageUpload != null)
+                {
+                    var count = imageUpload.ContentLength;
+                    news.Image = new byte[count];
+                    imageUpload.InputStream.Read(news.Image, 0, (int)count);
+                    news.MineType = imageUpload.ContentType;
+                }
+                try
+                {
+                    _repoNews.Updete(news);
+                    return RedirectToAction("Index");
+                }
+                catch 
+                {
+                    return View(news);
+                }
             }
-            catch
-            {
-                return View();
-            }
+            else
+                return View(news);
         }
 
         // GET: Admin/Delete/5

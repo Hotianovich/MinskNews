@@ -14,6 +14,7 @@ namespace MinskNews
         void Create(T t);
         void Updete(T t);
         void Delete(int id);
-       
+        Task<T> GetAsync(int id);
+
     }
 }
