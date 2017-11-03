@@ -1,0 +1,69 @@
+﻿@model MinskNews.Models.News
+
+@{
+    ViewBag.Title = "Добавить новость";
+}
+
+<h2 class="text-center title">Добавление новости</h2>
+
+<div class="panel panel-default my-news">
+    <div class="inside-panel">
+        @using (Html.BeginForm("Create", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label table-title" })
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control title-form " } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ShortDescription, htmlAttributes: new { @class = "control-label table-title" })
+                        <div>
+                            @Html.TextAreaFor(model => model.ShortDescription,  htmlAttributes: new { @class = "my-area-short form-control  title-form" } )
+                            @Html.ValidationMessageFor(model => model.ShortDescription, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FullText, htmlAttributes: new { @class = "control-label table-title" })
+                        <div>
+                            @Html.TextAreaFor(model => model.FullText, htmlAttributes: new { @class = "my-area-full form-control title-form" } )
+                            @Html.ValidationMessageFor(model => model.FullText, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.AddDate, htmlAttributes: new { @class = "control-label table-title" })
+                        @Html.EditorFor(model => model.AddDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AddDate, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Выберите файл", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <input type="file" name="imageUpload" class="none-border" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

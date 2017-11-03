@@ -20,21 +20,17 @@ namespace MinskNews.Controllers
             return View(_repoNews.GetAll());
         }
 
-        // GET: Admin/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+       
 
         // GET: Admin/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new News());
         }
 
         // POST: Admin/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(News news, HttpPostedFileBase imageUpload = null)
         {
             try
             {

@@ -22,7 +22,7 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 400px;
 }
 
 a:link, a:visited, a:hover, a:focus, a:active {
@@ -115,4 +115,22 @@ logo-a{
 
 .table-content{
      font-family: 'Philosopher', sans-serif;
+     font-size:14px;
+}
+
+.title-form{
+    max-width: 800px!important;
+    width:100%;
+}
+
+.my-area-short{
+    border:1px solid #b7bfc6;
+    resize:none;
+    height:100px!important;
+}
+
+.my-area-full{
+    border:1px solid #b7bfc6;
+    resize:none;
+    height:400px!important;
 }
