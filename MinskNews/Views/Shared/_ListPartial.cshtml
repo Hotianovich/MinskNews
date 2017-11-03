@@ -1,0 +1,38 @@
+﻿@using MinskNews.Models;
+@using System.Text;
+@model PageListViewModel<News>
+
+@{
+    StringBuilder result = new StringBuilder();
+    var i = 0;
+    TagBuilder row = new TagBuilder("div");
+
+    foreach (var item in Model)
+    {
+        i++;
+        if (i == 1)
+        {
+            row = new TagBuilder("div");
+            row.AddCssClass("row");
+            row.AddCssClass("item-row");
+        }
+
+        row.InnerHtml += Html.Partial("_ItemViewPartial", item);
+
+        if (i == 5)
+        {
+            result.Append(row.ToString());
+        }
+    }
+
+    if (i != 5)
+    {
+        result.Append(row.ToString());
+        i = 0;
+    }
+}
+
+@MvcHtmlString.Create(result.ToString())
+@Html.Partial("_PagePartial", Model)
+
+

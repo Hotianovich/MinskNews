@@ -1,0 +1,10 @@
+﻿@using MinskNews.Models;
+@model PageListViewModel<News>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div id="List">
+    @Html.Partial("_ListPartial", Model);
+</div>

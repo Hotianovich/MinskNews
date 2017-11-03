@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MinskNews.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,21 @@ namespace MinskNews.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        IRepository<News> _repoNews;
+        int pageSize = 5;
+        public HomeController(IRepository<News> repoNews)
         {
-            return View();
+            _repoNews = repoNews;
+        }
+        public ActionResult Index(int page = 1)
+        {
+            var news = _repoNews.GetAll();
+            var model = PageListViewModel<News>.CreatePage(news, page, pageSize);
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_ListPartial", model);
+            }
+            return View(model);
         }
 
        
