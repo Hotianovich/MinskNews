@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg3300" viewBox="0 0 128.14 288.54" version="1.0">
+  <g id="layer1" transform="translate(-321.19 -330.24)">
+    <g id="g3292" stroke-linejoin="round" stroke="#000" stroke-linecap="round" transform="matrix(.92668 .37585 -.37585 .92668 341.08 -494.58)">
+      <path id="path3274" stroke-width="1.5995" fill="#fff" d="m384.8 787.87l1.84 210.73 13.83 39.6 16.05-40.31-0.88-213.03c-10.98 1.35-21.74 2.6-30.84 3.01z"/>
+      <path id="path3278" fill="#fff" d="m395.5 1022.7c3.85-2.7 6.58-2.4 10.36 0.2"/>
+      <path id="path2488" stroke-width="1.6" fill="#fff" d="m384.94 756.76v-17.77c4.89-10.99 24.78-12.69 30.38-0.92l-0.32 17.97c-7.06 2.98-17.85 4.27-30.06 0.72z"/>
+      <path id="path2486" stroke-width="1.8065" fill="#fff" d="m384.73 792.05v-36.49c9.33-2.35 18.35-5.56 30.51 0l0.65 36.49c-12.67-2.86-22.37-1.32-31.16 0z"/>
+      <path id="path3268" stroke-width=".79049" fill="#fff" d="m384.83 768.97c9.63-2.42 18.45-2.7 30.04-0.71l0.38 6.22c-9.96-2.61-19.96-2.02-30.42 0.03v-5.54z"/>
+      <path id="path3290" transform="translate(108.22 729.44)" fill="none" d="m278.38 267.38c8.63-6.3 18.13-8.98 29.59-0.19"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Crayon mine / pencil</dc:title>
+        <dc:date>2010-04-12T01:50:16</dc:date>
+        <dc:description>black and white, clip art, clipart, colouring book, line art, office, outline, pencil, school, write, </dc:description>
+        <dc:source>http://openclipart.org/detail/46285/crayon-mine-/-pencil-by-lmproulx</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>lmproulx</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>black and white</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>colouring book</rdf:li>
+            <rdf:li>line art</rdf:li>
+            <rdf:li>office</rdf:li>
+            <rdf:li>outline</rdf:li>
+            <rdf:li>pencil</rdf:li>
+            <rdf:li>school</rdf:li>
+            <rdf:li>write</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -20,6 +20,7 @@ namespace MinskNews.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd'.'MM'.'yyyy}", ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "Введите дату")]
+        [Display(Name = "Дата")]
         public DateTime AddDate { get; set; }
 
         [MaxLength(1000)]

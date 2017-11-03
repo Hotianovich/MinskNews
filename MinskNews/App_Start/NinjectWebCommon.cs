@@ -15,6 +15,7 @@ namespace MinskNews.App_Start
     using MinskNews;
     using Repositories;
     using Models;
+    using Ninject.Web.Common.WebHost;
 
     public static class NinjectWebCommon 
     {

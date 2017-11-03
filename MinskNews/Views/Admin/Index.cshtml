@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MinskNews.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center title">Список новостей</h2>
+
+<div class="panel panel-default my-news">
+    <div class="inside-panel">
+        <div>
+            @Html.ActionLink("Добавить новость", "Create", null, htmlAttributes: new { @class = "btn but-add", @type = "button"})
+        </div>
+        <table class="table">
+            <tr class="table-title">
+                <td>
+
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Title)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.AddDate)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.ShortDescription)
+                </td>
+                <td></td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr class="table-content">
+                    <td>
+                        @Html.ActionLink(" ", "Edit", new { id = item.Id }, new { @class = "edit-news", style = "background-image:url(/Content/Images/Pencil3.svg); background-repeat: no-repeat; display:block; height:20px; width:20px;" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShortDescription)
+                    </td>
+                    <td>
+                        @Html.ActionLink(" ", "Delete", new { id = item.Id }, new { @class = "edit-news", style = "background-image:url(/Content/Images/hrum-trash.svg); background-repeat: no-repeat; display:block; height:20px; width:20px;" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

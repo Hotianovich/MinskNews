@@ -11,35 +11,25 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>   
-    <div class="navbar navbar-default navbar-top">
+<body>
+    <div class="navbar navbar-default navbar-top navbar-fixed-top">
         <div class="container">
             <div class="logo">
                 <ul class="nav navbar-nav">
                     <li><img src="~/Content/Images/logo-women-left.jpg" alt="picter" /></li>
                     <li>@Html.ActionLink("Вечерний минск", "Index", "Home", null, htmlAttributes: new { @class = "logo-a" })</li>
-                </ul>           
-            </div>
-        </div>
-    </div>
-    
-    <div class="navbar navbar-default navbar-lower">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav nav-link">
-                    <li>@Html.ActionLink("Главная ", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Администрирование", "About", "Home")</li>
                 </ul>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav nav-link">
+                        <li>@Html.ActionLink("Главная ", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Администрирование", "Index", "Admin")</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
+    
     <div class="container body-content">
         @RenderBody()
         <hr />
