@@ -90,25 +90,11 @@ namespace MinskNews.Controllers
         }
 
         // GET: Admin/Delete/5
-        public ActionResult Delete(int id)
+        public RedirectToRouteResult Delete(int id)
         {
-            return View();
+            _repoNews.Delete(id);
+            return RedirectToAction("Index");
         }
 
-        // POST: Admin/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
