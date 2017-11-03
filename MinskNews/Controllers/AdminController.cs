@@ -25,7 +25,7 @@ namespace MinskNews.Controllers
         // GET: Admin/Create
         public ActionResult Create()
         {
-            return View(new News());
+            return View();
         }
 
         // POST: Admin/Create

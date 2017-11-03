@@ -134,3 +134,20 @@ logo-a{
     resize:none;
     height:400px!important;
 }
+
+.text-editor-calendar {
+    outline: none;
+    border: 0;
+    overflow: hidden;
+    height: 20px;
+    width: 80px;  
+}
+
+.calendaric img {
+    height:20px;
+    width:20px;
+}
+
+.del-marg{
+    margin-left:0px!important;
+}

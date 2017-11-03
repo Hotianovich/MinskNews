@@ -8,6 +8,9 @@
 
 <div class="panel panel-default my-news">
     <div class="inside-panel">
+        <div>
+            @Html.ActionLink("К списку новостей", "Index", null, htmlAttributes: new { @class = "btn but-add", @type = "button" })
+        </div>
         @using (Html.BeginForm("Create", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <div class="row">
@@ -37,20 +40,23 @@
 
                     <div class="form-group">
                         @Html.LabelFor(model => model.AddDate, htmlAttributes: new { @class = "control-label table-title" })
-                        @Html.EditorFor(model => model.AddDate, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.AddDate, "", new { @class = "text-danger" })
+                        <div class="calendaric">
+                            @Html.EditorFor(model => model.AddDate, new { htmlAttributes = new { @class = "text-editor-calendar", @placeholder = "дд.мм.гггг" } })
+                            @Html.ValidationMessageFor(model => model.AddDate, "", new { @class = "text-danger" })
+                        </div>
+                       
                     </div>
 
                     <div class="form-group">
-                        @Html.Label("Выберите файл", htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
+                        @Html.Label("Выберите файл", htmlAttributes: new { @class = "control-label table-title" })
+                        <div>
                             <input type="file" name="imageUpload" class="none-border" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Create" class="btn btn-default" />
+                        <div>
+                            <input type="submit" value="Добавить" class="btn but-add del-marg" />
                         </div>
                     </div>
                 </div>
@@ -58,7 +64,7 @@
         }
 
         <div>
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("К списку новостей", "Index", null, htmlAttributes: new { @class = "btn but-add", @type = "button" })
         </div>
     </div>
 </div>

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Philosopher&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"> 
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -39,6 +40,8 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/myscripts")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
