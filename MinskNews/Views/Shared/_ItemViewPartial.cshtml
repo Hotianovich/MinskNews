@@ -4,30 +4,23 @@
     DateTime date = Model.AddDate;
 }
 
-<div class="col-md-12">
-    <div class="thumbnail">
-        @if (Model.Image == null)
-        {
-            <p>Нет изображения</p>
-        }
-        else
-        {
-            <img width="150" height="150" src="@Url.Action("GetImage", "News", new { newsId = Model.Id})" class="img-thumbnail" />
-        }
-        <div class="caption">
-            <div class="item-name">
-                
-                <h3>@Html.Label(date.ToString("dd MM yyyy"), htmlAttributes: new { @class = "labl-red" })</h3>
-            </div>
-            <div class="item-description">
-                
-            </div>
-            <div class="centered">
-                <h3 class="badge">Грузоподьёмность @Model.Title </h3>
-            </div>
-            <div class="centered">
-                <h3>Цена @Model.ShortDescription</h3>
-            </div>
+<div class="col-md-12 general-top">
+    <div class="panel panel-default general">
+        <div>
+            @Html.Label(date.ToString("dd MM yyyy"), htmlAttributes: new { @class = "table-content" })
         </div>
+        <div class="general-link">
+            @Html.ActionLink(@Html.DisplayFor(modelItem => modelItem.Title).ToString(), "Index", "News", new { newsId = Model.Id}, htmlAttributes: new { @class = "title-link"})
+        </div>
+
+        @if (Model.Image != null)
+        {
+
+            <img width="150" src="@Url.Action("GetImage", "News", new { newsId = Model.Id})" class="img-thumbnail general-image" />
+        }
+        <div class="table-content general-content">
+            @Model.ShortDescription
+        </div>
+
     </div>
 </div>
