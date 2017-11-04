@@ -69,7 +69,8 @@ logo-a{
 /*================ adminca ====================*/
 .my-news{
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.15);
-    min-height: 500px;
+    height:100%;
+    overflow:auto;
     background-color: #fff;
 }
 
@@ -211,4 +212,16 @@ footer{
      font-family: 'Philosopher', sans-serif;
      font-size:20px;
      margin-top: 10px;
+}
+/*================== Three news =========*/
+.centered{
+    text-align:center;
+}
+
+.hot-link{
+    padding:10px 10px;
+}
+
+.hot-link a{
+    color:black!important;
 }
