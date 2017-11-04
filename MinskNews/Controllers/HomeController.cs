@@ -31,6 +31,11 @@ namespace MinskNews.Controllers
             var randnews = RandThree();
             return PartialView(randnews);
         }
+
+        /// <summary>
+        /// Выберает три случайных объекта News
+        /// </summary>
+        /// <returns>Коллекцию объектов News</returns>
         public IEnumerable<News> RandThree()
         {
             var count = _repoNews.GetAll();

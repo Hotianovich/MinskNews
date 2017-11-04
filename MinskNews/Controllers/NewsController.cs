@@ -22,6 +22,11 @@ namespace MinskNews.Controllers
             return View(_repoNews.Get(newsId));
         }
 
+        /// <summary>
+        /// Image объекта News
+        /// </summary>
+        /// <param name="id">Значение первичного ключа для поиска объека News</param>       
+        /// <returns>Возвращает массив байтов</returns>
         public async Task<FileResult> GetImage(int newsId)
         {
             var newsImage = await _repoNews.GetAsync(newsId);
