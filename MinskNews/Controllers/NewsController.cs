@@ -17,9 +17,9 @@ namespace MinskNews.Controllers
             _repoNews = repoNews;
         }
         // GET: News
-        public ActionResult Index()
+        public ActionResult Index(int newsId)
         {
-            return View();
+            return View(_repoNews.Get(newsId));
         }
 
         public async Task<FileResult> GetImage(int newsId)

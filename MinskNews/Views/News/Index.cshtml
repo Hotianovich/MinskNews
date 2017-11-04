@@ -1,0 +1,35 @@
+﻿@model MinskNews.Models.News
+
+@{
+    ViewBag.Title = "Новости";
+    DateTime date = Model.AddDate;
+}
+
+
+<div class="panel panel-default my-news general-top">
+    <div class="inside-panel">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-9">
+                <div>
+                    @Html.Label(date.ToString("dd MM yyyy"), htmlAttributes: new { @class = "table-content" })
+                </div>
+                <p class="title-news">
+                    @Model.Title
+                </p>
+                @if (Model.Image != null)
+                {
+                    <img src="@Url.Action("GetImage", "News", new { newsId = Model.Id})" class="img-full" />
+                }
+                <p class="full-text">
+                    @Model.FullText
+                </p>
+            </div>
+        </div>      
+        <div>
+            @Html.ActionLink("К списку новостей", "Index", "Home", null, htmlAttributes: new { @class = "btn but-add", @type = "button" })
+        </div>
+    </div>
+</div>
+
+
+

@@ -194,3 +194,21 @@ logo-a{
 footer{
     text-align:center;
 }
+
+/*================ Full news page ==========*/
+.img-full{
+    width:100%;
+    height: auto;
+}
+
+.title-news{
+    font-family: 'Vollkorn', serif;
+    font-size: 24px;
+    font-weight:600;
+}
+
+.full-text{
+     font-family: 'Philosopher', sans-serif;
+     font-size:20px;
+     margin-top: 10px;
+}
