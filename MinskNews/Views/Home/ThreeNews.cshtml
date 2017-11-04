@@ -1,28 +1,29 @@
 ﻿@model IEnumerable<MinskNews.Models.News>
 
 
-<div class="">
-    <div class="">
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-12">
-                    <div class="thumbnail general-top">
-                        <div class="centered">
-                            @if (item.Image != null)
-                            {
-                                <img width="150" src="@Url.Action("GetImage", "News", new { newsId = item.Id})" class="img-thumbnail" />
-                            }
-                        </div>
-                        <div class="hot-link">
-                            @Html.ActionLink(item.Title, "Index", "News", new { newsId = item.Id }, htmlAttributes: new { @class = "table-content" })
-                        </div>
+@if (Model != null)
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-12">
+                <div class="thumbnail general-top">
+                    <div class="centered">
+                        @if (item.Image != null)
+                        {
+                            <img width="150" src="@Url.Action("GetImage", "News", new { newsId = item.Id})" class="img-thumbnail" />
+                        }
+                    </div>
+                    <div class="hot-link">
+                        @Html.ActionLink(item.Title, "Index", "News", new { newsId = item.Id }, htmlAttributes: new { @class = "table-content" })
                     </div>
                 </div>
-            }
-        </div>
+            </div>
+        }
     </div>
-</div>
+}
+       
+    
 
 
 
