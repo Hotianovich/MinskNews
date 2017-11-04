@@ -43,8 +43,8 @@ namespace MinskNews.Controllers
             List<News> listRand = new List<News>();
             for (int i = 0; i < 3; i++)
             {
-                var id = rand.Next(1, count.Count()-1);
-                News news = _repoNews.Get(id);
+                var id = rand.Next(0, count.Count());
+                News news = count.ElementAt(id);
                 listRand.Add(news);
             }
             return listRand;
