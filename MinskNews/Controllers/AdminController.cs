@@ -52,7 +52,7 @@ namespace MinskNews.Controllers
                 }
             }
             else
-                return View(news);
+                return View("Create", news);
             
         }
 
